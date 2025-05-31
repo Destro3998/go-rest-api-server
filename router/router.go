@@ -5,6 +5,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// using mux router for CRUD operations
 func SetupRouter() *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/users", handlers.GetUsers).Methods("GET")

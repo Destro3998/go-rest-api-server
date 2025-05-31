@@ -10,6 +10,7 @@ import (
 
 var users = []models.User{}
 
+// functions for users CRUD operations
 func GetUsers(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(users)
 }
@@ -29,6 +30,7 @@ func GetUser(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
+	// edge case
 	http.NotFound(w, r)
 }
 
@@ -41,6 +43,7 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
+	// edge case
 	http.NotFound(w, r)
 }
 
