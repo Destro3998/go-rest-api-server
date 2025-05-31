@@ -1,0 +1,10 @@
+/bin/
+/vendor/
+*.exe
+*.log
+*.tmp
+
+# Go workspace
+go.sum
+*.test
+*.out
